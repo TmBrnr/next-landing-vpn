@@ -5,22 +5,23 @@ import {motion} from "framer-motion";
 import getScrollAnimation from "../utils/getScrollAnimation";
 import ScrollAnimationWrapper from "./Layout/ScrollAnimationWrapper";
 
+
 const Hero = ({
   listUser = [
     {
-      name: "Users",
-      number: "390",
-      icon: "/assets/Icon/heroicons_sm-user.svg",
+      name: "Experience",
+      number: "12+ years",
+      icon: "/assets/Icon/experiences.svg",
     },
     {
-      name: "Locations",
-      number: "20",
+      name: "Based in",
+      number: "Germany",
       icon: "/assets/Icon/gridicons_location.svg",
     },
     {
-      name: "Server",
-      number: "50",
-      icon: "/assets/Icon/bx_bxs-server.svg",
+      name: "(Co)Founded",
+      number: "Fastic, Lovoo, and more",
+      icon: "/assets/Icon/rocket.svg",
     },
   ],
 }) => {
@@ -47,11 +48,11 @@ const Hero = ({
             <div className="flex w-full">
               <motion.div className="h-full w-full" variants={scrollAnimation}>
                 <Image
-                  src="/assets/Illustration1.png"
+                  src="/assets/hero-image-3.png"
                   alt="VPN Illustrasi"
                   quality={100}
-                  width={612}
-                  height={383}
+                  width={908}
+                  height={758}
                   layout="responsive"
                 />
               </motion.div>
@@ -73,10 +74,11 @@ const Hero = ({
                   <img src={listUsers.icon} className="h-6 w-6" />
                 </div>
                 <div className="flex flex-col">
+                <p className="text-lg text-black-500">{listUsers.name}</p>
                   <p className="text-xl text-black-600 font-bold">
-                    {listUsers.number}+
+                    {listUsers.number}
                   </p>
-                  <p className="text-lg text-black-500">{listUsers.name}</p>
+
                 </div>
               </div>
             </motion.div>

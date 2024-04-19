@@ -10,41 +10,62 @@ import ArrowNext from "../public/assets/Icon/eva_arrow-next-fill.svg";
 const Testimoni = ({
   listTestimoni = [
     {
-      name: "iezh Robert",
-      image: "/assets/people-3.png",
-      city: "Warsaw",
-      country: "Poland",
-      rating: "4.5",
+      name: "Out of the Box",
+      image: "/assets/outOfTheBox.png",
+      city: "ironSource",
+      Link: "https://podcasts.apple.com/us/podcast/the-real-people-behind-your-app-community-based-apps/id1522260018?i=1000560103611",
       testimoni:
-        "Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best",
+        "The real people behind your app: community-based apps and the growth loop",
     },
     {
-      name: "iezh Robert",
-      image: "/assets/people-3.png",
-      city: "Warsaw",
-      country: "Poland",
-      rating: "4.5",
+      name: "Out of the Box",
+      image: "/assets/outOfTheBox.png",
+      city: "ironSource",
+      Link: "https://podcasts.apple.com/us/podcast/the-real-people-behind-your-app-community-based-apps/id1522260018?i=1000560103611",
       testimoni:
-        "Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best",
+        "The real people behind your app: community-based apps and the growth loop",
     },
     {
-      name: "iezh Robert",
-      image: "/assets/people-3.png",
-      city: "Warsaw",
-      country: "Poland",
-      rating: "4.5",
+      name: "Out of the Box",
+      image: "/assets/outOfTheBox.png",
+      city: "ironSource",
+      Link: "https://podcasts.apple.com/us/podcast/the-real-people-behind-your-app-community-based-apps/id1522260018?i=1000560103611",
       testimoni:
-        "Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best",
+        "The real people behind your app: community-based apps and the growth loop",
     },
     {
-      name: "iezh Robert",
-      image: "/assets/people-3.png",
-      city: "Warsaw",
-      country: "Poland",
-      rating: "4.5",
+      name: "Out of the Box",
+      image: "/assets/outOfTheBox.png",
+      city: "ironSource",
+      Link: "https://podcasts.apple.com/us/podcast/the-real-people-behind-your-app-community-based-apps/id1522260018?i=1000560103611",
       testimoni:
-        "Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best",
+        "The real people behind your app: community-based apps and the growth loop",
     },
+    {
+      name: "Out of the Box",
+      image: "/assets/outOfTheBox.png",
+      city: "ironSource",
+      Link: "https://podcasts.apple.com/us/podcast/the-real-people-behind-your-app-community-based-apps/id1522260018?i=1000560103611",
+      testimoni:
+        "The real people behind your app: community-based apps and the growth loop",
+    },
+    {
+      name: "Out of the Box",
+      image: "/assets/outOfTheBox.png",
+      city: "ironSource",
+      Link: "https://podcasts.apple.com/us/podcast/the-real-people-behind-your-app-community-based-apps/id1522260018?i=1000560103611",
+      testimoni:
+        "The real people behind your app: community-based apps and the growth loop",
+    },
+    {
+      name: "Out of the Box",
+      image: "/assets/outOfTheBox.png",
+      city: "ironSource",
+      Link: "https://podcasts.apple.com/us/podcast/the-real-people-behind-your-app-community-based-apps/id1522260018?i=1000560103611",
+      testimoni:
+        "The real people behind your app: community-based apps and the growth loop",
+    },
+   
   ],
 }) => {
   const settings = {
@@ -60,7 +81,7 @@ const Testimoni = ({
     infinite: true,
     speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 2,
+    slidesToScroll: 4,
     responsive: [
       {
         breakpoint: 770,
@@ -104,17 +125,9 @@ const Testimoni = ({
                     <p className="text-lg text-black-600 capitalize">
                       {listTestimonis.name}
                     </p>
-                    <p className="text-sm text-black-500 capitalize">
-                      {listTestimonis.city},{listTestimonis.country}
-                    </p>
                   </div>
                 </div>
-                <div className="flex flex-none items-center ml-auto order-1 xl:order-2">
-                  <p className="text-sm">{listTestimonis.rating}</p>
-                  <span className="flex ml-4">
-                    <Stars className="h-4 w-4" />
-                  </span>
-                </div>
+
               </div>
               <p className="mt-5 text-left">“{listTestimonis.testimoni}”.</p>
             </div>
