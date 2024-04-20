@@ -103,7 +103,7 @@ const Podcasts = ({
 >
   {listPodcast.map((podcast, index) => (
     <div className="px-3 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 flex flex-col items-center" key={index}>
-      <div className="border-2 border-gray-500 hover:border-orange-500 transition-all rounded-lg p-4 flex flex-col items-center justify-center  min-h-[500px] sm:min-h-[450px]"> {/* Added min-h-[500px] */}
+      <div className="border-2 border-gray-500 hover:border-orange-500 transition-all rounded-lg p-4 flex flex-col items-center justify-center  sm:min-h-[450px]" style={{minHeight:"500px"}}> {/* Added min-h-[500px] */}
         <Image
           src={podcast.image}
           height={200}
