@@ -1,6 +1,6 @@
 import React, { useMemo } from "react";
 import Image from "next/image";
-import Testimoni from "./Testimoni";
+import Podcast from "./Testimoni";
 import ButtonPrimary from "./misc/ButtonPrimary";
 import ButtonOutline from "./misc/ButtonOutline.";
 import { motion } from "framer-motion";
@@ -36,7 +36,7 @@ const Pricing = () => {
             <ScrollAnimationWrapper className="flex justify-center">
               <motion.div
                 variants={scrollAnimation}
-                className="flex flex-col justify-center items-center border-2 border-gray-500 rounded-xl py-4 px-6 lg:px-12 xl:px-20"
+                className="flex flex-col justify-center w-full items-center border-2 border-gray-500 rounded-xl py-4 px-6 lg:px-12 xl:px-20"
                 whileHover={{
                   scale: 1.1,
                   transition: {
@@ -76,7 +76,7 @@ const Pricing = () => {
             <ScrollAnimationWrapper className="flex justify-center">
               <motion.div
                 variants={scrollAnimation}
-                className="flex flex-col justify-center items-center border-2 border-gray-500 rounded-xl py-4 px-6 lg:px-12 xl:px-20"
+                className="flex flex-col justify-center w-full items-center border-2 border-gray-500 rounded-xl py-4 px-6 lg:px-12 xl:px-20"
                 whileHover={{
                   scale: 1.1,
                   transition: {
@@ -119,7 +119,7 @@ const Pricing = () => {
             <ScrollAnimationWrapper className="flex justify-center">
               <motion.div
                 variants={scrollAnimation}
-                className="flex flex-col justify-center items-center border-2 border-gray-500 rounded-xl py-4 px-6 lg:px-12 xl:px-20"
+                className="flex flex-col justify-center items-center border-2 w-full border-gray-500 rounded-xl py-4 px-6 lg:px-12 xl:px-20"
                 whileHover={{
                   scale: 1.1,
                   transition: {
@@ -172,7 +172,7 @@ const Pricing = () => {
           </ScrollAnimationWrapper>
           <ScrollAnimationWrapper className="w-full flex flex-col py-12">
             <motion.div variants={scrollAnimation}>
-              <Testimoni />
+              <Podcast />
             </motion.div>
           </ScrollAnimationWrapper>
           <ScrollAnimationWrapper className="relative w-full mt-16">
