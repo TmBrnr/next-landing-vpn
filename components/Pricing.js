@@ -6,6 +6,7 @@ import ButtonOutline from "./misc/ButtonOutline.";
 import { motion } from "framer-motion";
 import getScrollAnimation from "../utils/getScrollAnimation";
 import ScrollAnimationWrapper from "./Layout/ScrollAnimationWrapper";
+import Link from "next/link";
 
 const Pricing = () => {
   const scrollAnimation = useMemo(() => getScrollAnimation(), []);
@@ -22,7 +23,7 @@ const Pricing = () => {
               variants={scrollAnimation}
               className="text-2xl sm:text-3xl lg:text-4xl font-medium text-black-600 leading-relaxed"
             >
-              Services
+             Our Services
             </motion.h3>
             <motion.p
               variants={scrollAnimation}
@@ -166,7 +167,7 @@ const Pricing = () => {
               variants={scrollAnimation}
               className="leading-normal mx-auto mb-2 mt-4 w-10/12 sm:w-7/12 lg:w-6/12"
             >
-              Listen Tobias Boerner on the latest podcasts.
+              Tune in to hear Tobias Boerner discuss industry trends and share expert advice on recent podcasts.
             </motion.p>
           </ScrollAnimationWrapper>
           <ScrollAnimationWrapper className="w-full flex flex-col py-12">
@@ -183,7 +184,7 @@ const Pricing = () => {
                   </h5>
                   <p>Bring your business to the next level.</p>
                 </div>
-                <ButtonPrimary>Contact</ButtonPrimary>
+                <ButtonPrimary><Link href="/contact"><a href="/contact">Contact</a></Link></ButtonPrimary>
               </div>
               <div
                 className="absolute bg-black-600 opacity-5 w-11/12 roudned-lg h-60 sm:h-56 top-0 mt-8 mx-auto left-0 right-0"

@@ -3,67 +3,58 @@ import React, { useState } from "react";
 // import react slick
 import Slider from "react-slick";
 import Image from "next/image";
-import Stars from "../public/assets/Icon/stars.svg";
 import ArrowBack from "../public/assets/Icon/eva_arrow-back-fill.svg";
 import ArrowNext from "../public/assets/Icon/eva_arrow-next-fill.svg";
 
-const Testimoni = ({
-  listTestimoni = [
+const Podcasts = ({
+  listPodcast = [
     {
       name: "Out of the Box",
       image: "/assets/outOfTheBox.png",
-      city: "ironSource",
+      source: "ironSource",
       Link: "https://podcasts.apple.com/us/podcast/the-real-people-behind-your-app-community-based-apps/id1522260018?i=1000560103611",
-      testimoni:
+      title:
         "The real people behind your app: community-based apps and the growth loop",
+    },
+    {
+      name: "Business of Apps Podcast",
+      image: "/assets/bofApps.png",
+      source: "Business of Apps",
+      Link: "https://podcasts.apple.com/ie/podcast/business-of-apps-podcast/id1494940243",
+      title:
+        "#117: App Subscriptions Best Practices",
+    },
+    {
+      name: "Subscription League",
+      image: "/assets/subLeague.png",
+      source: "purchasely",
+      Link: "https://www.purchasely.com/blog/all-about-subscription-app-onboarding-with-tobias-boerner-appic",
+      title:
+        "All about subscription app onboarding",
+    },
+    {
+      name: "App Promotion Summit",
+      image: "/assets/appsSummit.png",
+      source: "App Promotion Summit",
+      Link: "https://www.youtube.com/watch?v=UKEVHiJh9Og",
+      title:
+        "How to Increase Revenue with ASO & Product Onboarding",
     },
     {
       name: "Out of the Box",
       image: "/assets/outOfTheBox.png",
-      city: "ironSource",
-      Link: "https://podcasts.apple.com/us/podcast/the-real-people-behind-your-app-community-based-apps/id1522260018?i=1000560103611",
-      testimoni:
-        "The real people behind your app: community-based apps and the growth loop",
+      source: "ironSource",
+      Link: "https://www.youtube.com/watch?v=inrce1Y6ES4",
+      title:
+        "How to optimize communities to drive revenue",
     },
     {
-      name: "Out of the Box",
-      image: "/assets/outOfTheBox.png",
-      city: "ironSource",
+      name: "The Mobile User Acquisition Show",
+      image: "/assets/mobileShow.png",
+      source: "The Mobile User Acquisition Show",
       Link: "https://podcasts.apple.com/us/podcast/the-real-people-behind-your-app-community-based-apps/id1522260018?i=1000560103611",
-      testimoni:
-        "The real people behind your app: community-based apps and the growth loop",
-    },
-    {
-      name: "Out of the Box",
-      image: "/assets/outOfTheBox.png",
-      city: "ironSource",
-      Link: "https://podcasts.apple.com/us/podcast/the-real-people-behind-your-app-community-based-apps/id1522260018?i=1000560103611",
-      testimoni:
-        "The real people behind your app: community-based apps and the growth loop",
-    },
-    {
-      name: "Out of the Box",
-      image: "/assets/outOfTheBox.png",
-      city: "ironSource",
-      Link: "https://podcasts.apple.com/us/podcast/the-real-people-behind-your-app-community-based-apps/id1522260018?i=1000560103611",
-      testimoni:
-        "The real people behind your app: community-based apps and the growth loop",
-    },
-    {
-      name: "Out of the Box",
-      image: "/assets/outOfTheBox.png",
-      city: "ironSource",
-      Link: "https://podcasts.apple.com/us/podcast/the-real-people-behind-your-app-community-based-apps/id1522260018?i=1000560103611",
-      testimoni:
-        "The real people behind your app: community-based apps and the growth loop",
-    },
-    {
-      name: "Out of the Box",
-      image: "/assets/outOfTheBox.png",
-      city: "ironSource",
-      Link: "https://podcasts.apple.com/us/podcast/the-real-people-behind-your-app-community-based-apps/id1522260018?i=1000560103611",
-      testimoni:
-        "The real people behind your app: community-based apps and the growth loop",
+      title:
+        "How to use blockchain data to run targeted ads for web 3 with Tobias Boerner, Co-Founder at Wallet Ads, Appic and Admiral Studio.",
     },
    
   ],
@@ -81,7 +72,7 @@ const Testimoni = ({
     infinite: true,
     speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 4,
+    slidesToScroll: 3,
     responsive: [
       {
         breakpoint: 770,
@@ -104,36 +95,38 @@ const Testimoni = ({
 
   return (
     <>
-      <Slider
-        {...settings}
-        arrows={false}
-        ref={setSliderRef}
-        className="flex items-stretch justify-items-stretch"
-      >
-        {listTestimoni.map((listTestimonis, index) => (
-          <div className="px-3 flex items-stretch" key={index}>
-            <div className="border-2 border-gray-500 hover:border-orange-500 transition-all rounded-lg p-8 flex flex-col">
-              <div className="flex flex-col xl:flex-row w-full items-stretch xl:items-center">
-                <div className="flex order-2 xl:order-1">
-                  <Image
-                    src={listTestimonis.image}
-                    height={50}
-                    width={50}
-                    alt="Icon People"
-                  />
-                  <div className="flex flex-col ml-5 text-left">
-                    <p className="text-lg text-black-600 capitalize">
-                      {listTestimonis.name}
-                    </p>
-                  </div>
-                </div>
+     <Slider
+  {...settings}
+  arrows={false}
+  ref={setSliderRef}
+  className="flex items-stretch" // Adjusted for valid Tailwind CSS classes
+>
+  {listPodcast.map((podcast, index) => (
+    <div className="px-3 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 flex flex-col items-center" key={index}>
+      <div className="border-2 border-gray-500 hover:border-orange-500 transition-all rounded-lg p-4 flex flex-col items-center justify-center h-full  min-h-[500px] sm:min-h-[450px]"> {/* Added min-h-[500px] */}
+        <Image
+          src={podcast.image}
+          height={200}
+          width={200}
+          alt="Podcast image"
+          className="rounded-lg mb-2"
+        />
+        <p className="text-sm mt-2">{podcast.source}</p>
+        <p className="text-lg font-bold mt-1">{podcast.name}</p>
+        <p className="italic mt-1">“{podcast.title}”</p>
+        <a
+          href={podcast.link}
+          target="_blank"
+          rel="noreferrer"
+          className="text-orange-500 mt-2 underline"
+        >
+          Listen now
+        </a>
+      </div>
+    </div>
+  ))}
+</Slider>
 
-              </div>
-              <p className="mt-5 text-left">“{listTestimonis.testimoni}”.</p>
-            </div>
-          </div>
-        ))}
-      </Slider>
       <div className="flex w-full items-center justify-end">
         <div className="flex flex-none justify-between w-auto mt-14">
           <div
@@ -154,4 +147,4 @@ const Testimoni = ({
   );
 };
 
-export default Testimoni;
+export default Podcasts;

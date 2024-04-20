@@ -4,6 +4,7 @@ import ButtonPrimary from "./misc/ButtonPrimary";
 import {motion} from "framer-motion";
 import getScrollAnimation from "../utils/getScrollAnimation";
 import ScrollAnimationWrapper from "./Layout/ScrollAnimationWrapper";
+import Link from "next/link";
 
 
 const Hero = ({
@@ -43,7 +44,7 @@ const Hero = ({
               <p className="text-black-500 mt-4 mb-6">
               Growth and Digital Marketing services to startups, scale-ups, enterprises and agencies.
               </p>
-              <ButtonPrimary>Get in contact</ButtonPrimary>
+              <ButtonPrimary><Link href="/contact"><a href="/contact">Get in Contact</a></Link></ButtonPrimary>
             </div>
             <div className="flex w-full">
               <motion.div className="h-full w-full" variants={scrollAnimation}>
