@@ -68,7 +68,7 @@ const Podcasts = ({
         </a>
       );
     },
-    dotsClass: "slick-dots w-max absolute mt-20  ",
+    dotsClass: "slick-dots w-full sm:w-max flex mt-10 sm:absolute sm:mt-20  ",
     infinite: true,
     speed: 500,
     slidesToShow: 3,
@@ -127,8 +127,8 @@ const Podcasts = ({
   ))}
 </Slider>
 
-      <div className="flex w-full items-center justify-end">
-        <div className="flex flex-none justify-between w-auto mt-14">
+      <div className="flex flex-col w-full items-center sm:items-end justify-end">
+        <div className="flex  sm:flex-none justify-between w-auto mt-5 sm:mt-14">
           <div
             className="mx-4 flex items-center justify-center h-14 w-14 rounded-full bg-white border-orange-500 border hover:bg-orange-500 hover:text-white-500 transition-all text-orange-500 cursor-pointer"
             onClick={sliderRef?.slickPrev}
