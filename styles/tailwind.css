@@ -8,7 +8,7 @@ html {
   background: #fefefe;
 }
 body {
-  @apply bg-white-500;
+  background: #fefefe;
 }
 p {
   @apply text-black-500;
