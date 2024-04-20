@@ -83,7 +83,8 @@ export default function Contact() {
                 name="message"
                 placeholder="Your Message"
                 required
-                className="text-black-500 min-h-[300px] w-full mb-4 px-4 py-2 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500 transition-colors"
+                className="text-black-500 w-full mb-4 px-4 py-2 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500 transition-colors"
+                style={{ minHeight: "300px" }}
               ></textarea>
               <ButtonPrimary type="submit">Submit Form</ButtonPrimary>
             </form>
