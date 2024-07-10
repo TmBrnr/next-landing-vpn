@@ -28,7 +28,7 @@ export default function Impressum() {
             <motion.div variants={scrollAnimation} className="mb-5">
             <motion.p variants={scrollAnimation} className="text-lg text-gray-700 mb-2 font-bold">Angaben gemäß § 5 TMG:</motion.p>
             <motion.p variants={scrollAnimation} className="text-lg text-gray-700 mb-2">Innoshare GmbH</motion.p>
-            <motion.p variants={scrollAnimation} className="text-lg text-gray-700 mb-2">Frauenstr. 9</motion.p>
+            <motion.p variants={scrollAnimation} className="text-lg text-gray-700 mb-2">Prager Strasse 2a</motion.p>
             <motion.p variants={scrollAnimation} className="text-lg text-gray-700 mb-2">01067 Dresden</motion.p>
             <motion.p variants={scrollAnimation} className="text-lg text-gray-700 mb-2">Deutschland</motion.p>
             </motion.div>
